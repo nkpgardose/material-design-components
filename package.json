@@ -1,0 +1,24 @@
+{
+  "name": "material-design-components",
+  "version": "0.0.1",
+  "description": "Set of UI with Material Design look and feel ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkpgardose/material-design-components.git"
+  },
+  "keywords": [
+    "material",
+    "design",
+    "lite"
+  ],
+  "author": "Neil Kim Gardose",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nkpgardose/material-design-components/issues"
+  },
+  "homepage": "https://github.com/nkpgardose/material-design-components#readme"
+}
