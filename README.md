@@ -6,20 +6,33 @@ Material Design components offers set of UI Library with Material Design look an
 
 ## Installation
 
-**Work in Progress**
+### Clone this repository
+
+```sh
+$ cd <desired directory>
+$ git clone git@github.com:nkpgardose/material-design-components.git
+```
+
+### How to make it work
+
+This requires the following to run `material-design-components` locally:
+
+* [nodejs](https://nodejs.org/en/) w/ [npm](https://www.npmjs.com/)
+* [gulp](http://gulpjs.com/)
 
 ## Usage
 
-**Work in Progress**
+To run the project locally, run `gulp serve`.
+
+To make a distribution files, run `gulp` and it will produce `dist/` folder with compiled and minified **css** and **js**.
+
 
 ## Want to Contribute?
 Post an issue if you found bug/s or have any questions.
 If you want to contribute. Do pull request :heart:
 
 ## Coding Guidelines
-Following [rscss](https://github.com/rstacruz/rscss) for CSS.
-
-Following [Airbnb's JS Style Guide](https://github.com/airbnb/javascript) for JavaScript.
+The project follows [rscss](https://github.com/rstacruz/rscss) for CSS and [Airbnb's JS Style Guide](https://github.com/airbnb/javascript) for JavaScript.
 
 ## License
 
