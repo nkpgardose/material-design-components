@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js"],"names":["console","log"],"mappings":"YAAAA,SAAQC,IAAI","file":"material-design-components.js","sourcesContent":["console.log(\"Hello World!\");\n"],"sourceRoot":"/source/"}
