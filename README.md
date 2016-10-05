@@ -24,8 +24,7 @@ This requires the following to run `material-design-components` locally:
 
 To run the project locally, run `gulp serve`.
 
-To make a distribution files, run `gulp` and it will produce `dist/` folder with compiled and minified **css** and **js**.
-
+To make distribution files, run `gulp` and it will produce `dist/` folder with compiled and minified **css** and **js**.
 
 ## Want to Contribute?
 Post an issue if you found bug/s or have any questions.
