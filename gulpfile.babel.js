@@ -16,13 +16,11 @@ gulp.task('dist', ['html'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
-gulp.task('html', ['stylesheets'], () => {
+gulp.task('html', ['stylesheets', 'scripts'], () => {
   return gulp.src('*.html')
     .pipe($.useref({searchPath: ['.tmp', '.']}))
-    .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.cssnano()))
+    .pipe($.htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'))
-    .pipe($.size({title: 'stylesheets'}));
 });
 
 gulp.task('stylesheets', () => {
@@ -35,10 +33,26 @@ gulp.task('stylesheets', () => {
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.cssnano())
     .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('dist/stylesheets'));
+    .pipe(gulp.dest('dist/stylesheets'))
+    .pipe($.size({title: 'stylesheets'}));
 });
 
-gulp.task('serve', ['stylesheets:tmp'], () => {
+gulp.task('scripts', () => {
+  return gulp.src('scripts/**/*.js')
+    .pipe($.plumber())
+    .pipe($.sourcemaps.init({loadMaps: true}))
+    .pipe($.babel())
+    .pipe($.uglify({
+      sourceRoot: '.',
+      sourceMapIncludeSources: true
+    }))
+    .pipe($.concat('material-design-components.js'))
+    .pipe($.sourcemaps.write('.'))
+    .pipe(gulp.dest('dist/scripts'))
+    .pipe($.size({title: 'scripts'}));
+});
+
+gulp.task('serve', ['stylesheets:tmp', 'scripts:tmp'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -52,6 +66,7 @@ gulp.task('serve', ['stylesheets:tmp'], () => {
   ]).on('change', reload);
 
   gulp.watch('stylesheets/**/*.scss', ['stylesheets:tmp']);
+  gulp.watch('scripts/**/*.js', ['scripts:tmp']);
 });
 
 gulp.task('stylesheets:tmp', () => {
@@ -66,6 +81,16 @@ gulp.task('stylesheets:tmp', () => {
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/stylesheets'))
+    .pipe(reload({stream: true}));
+});
+
+gulp.task('scripts:tmp', () => {
+  return gulp.src('scripts/**/*.js')
+    .pipe($.plumber())
+    .pipe($.sourcemaps.init())
+    .pipe($.babel())
+    .pipe($.sourcemaps.write('.'))
+    .pipe(gulp.dest('.tmp/scripts'))
     .pipe(reload({stream: true}));
 });
 
