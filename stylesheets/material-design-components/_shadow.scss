@@ -1,3 +1,41 @@
+// By shadow depth default is 2dp
+// https://goo.gl/WJ3TBW
 .Shadow {
-  background-color: black;
+  box-shadow: 0 3px 3px 0.2px $shadow-key-color,
+              0 0 5px 1px $shadow-ambient-color;
+
+  &.switch {
+    box-shadow: 0 1px 1px 0px $shadow-key-color;
+  }
+
+  &.nearest {
+    box-shadow: 0 3px 2px 0.5px $shadow-key-color,
+                0 3px 2px 3px $shadow-ambient-color;
+  }
+  
+  &.nearer {
+    box-shadow: 0 3px 3px 1px $shadow-key-color,
+                0 0 3px 3px $shadow-ambient-color;
+  }
+
+  &.near {
+    box-shadow: 0 12px 10px 3px $far-shadow-key-color,
+                0 0 7px 3px $shadow-ambient-color;
+  }
+
+  &.far {
+    box-shadow: 0 12px 15px 3px $far-shadow-key-color,
+                0 0 10px 3px $shadow-ambient-color;
+  }
+
+  &.farther {
+    box-shadow: 0 12px 15px 8px $far-shadow-key-color,
+                0 0 15px 16px $shadow-ambient-color;
+  }
+
+  &.farthest {
+    box-shadow: 0 12px 16px 6px $far-shadow-key-color,
+                0 20px 12px 12px $shadow-ambient-color;
+  }
 }
+
