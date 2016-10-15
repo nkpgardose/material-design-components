@@ -14,9 +14,9 @@ html {
 // 1. Take the entire screen.
 // 2. Remove margin
 body {
-  margin: 0; // 2
-  min-height: 100%; // 1
   width: 100%; // 1
+  min-height: 100%; // 1
+  margin: 0; // 2
 }
 
 button {
