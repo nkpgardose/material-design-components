@@ -33,6 +33,13 @@ If you want to contribute. Do pull request :heart:
 ## Coding Guidelines
 The project follows [rscss](https://github.com/rstacruz/rscss) for CSS and [Airbnb's JS Style Guide](https://github.com/airbnb/javascript) for JavaScript.
 
+## Linters
+
+Linters help to enforce coding standard.
+
+* It uses `scss-lint` gem for stylesheets with `.scss-lint.yml` file that contains the code rules for scss.
+* `jscs` JS lint that follows Airbnb's JS style guide.
+
 ## License
 
 MIT © [Neil Kim Gardose](https://github.com/nkpgardose)
