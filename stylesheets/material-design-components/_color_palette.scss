@@ -270,16 +270,16 @@ $dark-disabled-hint-color: rgba($black, .38);
 $dark-dividers-color: rgba($black, .12);
 
 // White text on a dark backgrounds
-$light-primary-text-color: $white
+$light-primary-text-color: $white;
 $light-secondary-text-color: rgba($white, .7);
 $light-disabled-hint-color: rgba($white, .5);
 $light-dividers-color: rgba($white, .12);
 
 // Icon color - dark and light
 $dark-active-icon-color: rgba($black, .54);
-$dark-inactive-icon-color: rgba($black, .38);
+$dark-inactive-icon-color: rgba($black, .26);
 $light-active-icon-color: $white;
-$light-inactive-icon-color: rgba($white, .5);
+$light-inactive-icon-color: rgba($white, .3);
 
 // Dark theme
 $dark-status-bar-color: $black;
@@ -292,5 +292,4 @@ $light-status-bar-color: $grey300;
 $light-app-bar-color: $grey100;
 $light-background-color: $grey50;
 $light-card-dialog-color: $white;
-
 
