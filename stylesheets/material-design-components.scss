@@ -1,8 +1,14 @@
 @import "material-design-components/color_palette";
 @import "material-design-components/variables";
+@import "material-design-components/mixin";
 @import "material-design-components/base";
 @import "material-design-components/icon";
 @import "material-design-components/shadow";
+@import "material-design-components/type";
+
+@include desktop {
+  @import "material-design-components/desktop/type";
+};
 
 .browserupgrade {
   padding: .2em 0;

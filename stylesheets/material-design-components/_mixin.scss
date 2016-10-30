@@ -1,0 +1,9 @@
+@mixin english-font-family {
+  font-family: $sans-family;
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}

@@ -1,4 +1,23 @@
+// Media queries
+$desktop-breakpoint: 840px;
+
 // Shadow - https://goo.gl/WJ3TBW
 $shadow-key-color: rgba($black, .22);
 $far-shadow-key-color: rgba($black, .15);
 $shadow-ambient-color: rgba($black, .05);
+
+// Type - https://goo.gl/Xggcpl
+$sans-family: "Roboto", "Helvetica", "Arial", sans-serif;
+$jumbo-display: 112px;
+$large-display: 56px;
+$medium-display: 45px;
+$small-display: 34px;
+$headline: 24px;
+$title: 20px;
+$subheading: 16px;
+$body: 14px;
+$caption: 12px;
+$button-font-size: 14px;
+// Type desktop
+$body-desktop: 13px;
+$subheading-desktop: 15px;
