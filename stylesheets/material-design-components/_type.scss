@@ -23,7 +23,7 @@ h6 small {
 .Type {
   @include english-font-family;
   font-size: $body;
-  line-height: 20px;
+  line-height: 1.54;
 
   &.jumbo {
     font-size: $jumbo-display;
@@ -49,17 +49,17 @@ h6 small {
 
   &.med {
     font-size: $medium-display;
-    line-height: 48px;
+    line-height: 3.7;
   }
 
   &.sm {
     font-size: $small-display;
-    line-height: 40px;
+    line-height: 3.1;
   }
 
   &.headline {
     font-size: $headline;
-    line-height: 32px;
+    line-height: 2.5;
   }
 
   &.title {
@@ -71,7 +71,7 @@ h6 small {
 
   &.subheading {
     font-size: $subheading;
-    line-height: 28px;
+    line-height: 2.15;
   }
 
   &.caption {
