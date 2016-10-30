@@ -1,0 +1,12 @@
+html,
+body {
+  font-size: $body-desktop;
+}
+
+.Type {
+  font-size: $body-desktop;
+
+  &.caption {
+    font-size: $subheading-desktop;
+  }
+}

@@ -1,0 +1,88 @@
+// 1. Remove default spaces
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0; // 1
+  margin: 0; // 1
+}
+
+// 1. Behave like a sub header
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  color: $dark-secondary-text-color; // 1
+}
+
+.Type {
+  @include english-font-family;
+  font-size: $body;
+  line-height: 20px;
+
+  &.jumbo {
+    font-size: $jumbo-display;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -5px;
+  }
+
+  &.lrg,
+  &.med,
+  &.sm,
+  &.headline,
+  &.subheading,
+  &.caption {
+    font-weight: 400;
+  }
+
+  &.lrg {
+    font-size: $large-display;
+    line-height: 1.35;
+    letter-spacing: -2px;
+  }
+
+  &.med {
+    font-size: $medium-display;
+    line-height: 48px;
+  }
+
+  &.sm {
+    font-size: $small-display;
+    line-height: 40px;
+  }
+
+  &.headline {
+    font-size: $headline;
+    line-height: 32px;
+  }
+
+  &.title {
+    font-size: $title;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  &.subheading {
+    font-size: $subheading;
+    line-height: 28px;
+  }
+
+  &.caption {
+    font-size: $caption;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  // 1. Body 2
+  &.medWeight {
+    font-weight: 500;
+  }
+}
+

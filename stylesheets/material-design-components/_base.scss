@@ -9,6 +9,7 @@
 html {
   width: 100%; // 1
   height: 100%; // 1
+  color: $dark-primary-text-color;
 }
 
 // 1. Take the entire screen.
@@ -17,6 +18,14 @@ body {
   width: 100%; // 1
   min-height: 100%; // 1
   margin: 0; // 2
+}
+
+// 1. Show text content immediately instead of waiting for the desired font to load
+html,
+body {
+  font-family: "Helvetica", "Arial", sans-serif; // 1
+  font-size: $body;
+  font-weight: 400;
 }
 
 button {
