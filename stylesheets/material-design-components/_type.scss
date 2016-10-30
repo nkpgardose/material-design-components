@@ -86,3 +86,19 @@ h6 small {
   }
 }
 
+// Matching color with backgrounds to make more readable.
+// By default, it uses black 54% opacity.
+// 1. Contrast over light background
+// 2. Contrast over dark background
+// 3. Secondary light color.
+.ColorsContrast {
+  color: $dark-secondary-text-color; // 1
+
+  &.light {
+    color: $light-primary-text-color; // 2
+
+    &.secondary {
+      color: $light-secondary-text-color; // 3
+    }
+  }
+}
